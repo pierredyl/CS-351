@@ -27,16 +27,16 @@ A repository to hold the work done in CS-351.
 
 
 1. **What operation do you think accounts for most of hash-00's runtime?**
-   - 
+   - The nested for loop contributes to the large runtime of this program. For every hash, the inner for loop is repeated for as many bytes in that hash. Inside that for loop, an addition, multiplication, bit shift, and XOR operation are performed. This is repeated a huge number of times. This program has an upper bound of O(n^2). 
 
 2. **hash-01 and hash-02 both dynamically allocate memory for each hash computation. Is there much difference time-wise between their two allocation methods?**
-   - 
-
+   - I do not bnelieve there is much difference time wise between the allocation methods. All three of these hash functions use nested for loops, however, hash-01 and hash-02 use dynamic memory allocation. There is a big difference between hash-00 and the hash programs hash-01 and hash-02 however, and that's the method the bytes are read. Hash-01 and Hash-02 use the **read** function, reading the bytes in binary mode instead of text mode.
+   
 3. **hash-03 avoids the allocation by using a fixed-size array. Is there an appreciable speed difference?**
-   - 
+   - I don't think the speed difference is appreciable. It could be slightly better because no allocation or deallocation are being performed and there is better cache locality. 
 
 4. **Why is hash-04's memory usage so much larger than any of the other versions?**
-   - 
+   - Hash-04 loads the memory different than the other programs, because it uses an nmap. the line `void* memory = mmap(NULL, size, PROT_READ, MAP_PRIVATE, fd, 0);` maps the entire file into the process's virtual address space. Virtual memory is reserved for the entire file, rather than portions of it. 
 
 5. **What other compiler options did you try, and did they help at all?**
-   - 
+   - I found huge success with the compiler options shown in the second table above. While hash-00 improved by rougly 10 seconds (which is still pretty good), the other hash programs improved significantly. This is shown in the speedup vs hash-00 column. The largest improvement seen over Hash-00 was about 47x with this compiler option, vs 24x with no compiler options. 
