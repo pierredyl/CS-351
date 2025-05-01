@@ -1,7 +1,7 @@
 # Project-2 Report
 
 
-Output of runTrials.sh script.
+## Output of runTrials.sh script.
 |Thread<br>Count|Wall Clock<br>Time|User Time|System Time|Speedup|
 |:--:|--:|--:|--:|:--:|
 |1|14.56|13.90| 0.55|1.00|
@@ -21,3 +21,5 @@ Output of runTrials.sh script.
 |64| 2.01|17.45|15.53| 7.24|
 |72| 1.99|17.46|16.66| 7.32|
 |80| 1.99|17.68|16.35| 7.32|
+
+![](Graph_for_project2.png)
