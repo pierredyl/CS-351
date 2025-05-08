@@ -35,5 +35,5 @@ I would think that GPU performance would outperform CPU perform, especially with
 
 
 # PRETTY PICTURES
-
+[Pretty Picture](julia.ppm)
 
