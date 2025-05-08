@@ -35,5 +35,6 @@ I would think that GPU performance would outperform CPU perform, especially with
 
 
 # PRETTY PICTURES
+![image](https://github.com/user-attachments/assets/91444735-1b84-4d26-a5a1-10d6c4b8494b)
 [Pretty Picture](julia.ppm)
 
